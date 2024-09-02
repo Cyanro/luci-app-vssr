@@ -64,7 +64,9 @@ cd lede/package/lean/
 
 git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
 
-git clone https://github.com/jerrykuku/luci-app-vssr.git  
+git clone https://github.com/Cyanro/luci-app-vssr.git
+or
+git clone https://github.com/MilesPoupart/luci-app-vssr.git
 
 make menuconfig
 
@@ -93,6 +95,7 @@ opkg_install_cmd: Cannot install package luci-app-vssr.
 rm -rf tmp
 
 # 2.feeds.conf文件添加源
+src-git ADJ https://github.com/ADJazzzz/OpenWrt-package
 src-git helloworld https://github.com/fw876/helloworld
 src-git passwall https://github.com/xiaorouji/openwrt-passwall
 
@@ -106,7 +109,7 @@ make -j1 V=s
 或者也可以完全删除lede，重新git并修改feeds.conf（比较耗时）
 
 ### 感谢
-
+https://github.com/MilesPoupart/
 https://github.com/coolsnowwolf/lede
 
 ### 我的其它项目
